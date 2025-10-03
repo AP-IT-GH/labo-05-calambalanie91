@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  /* 'body' is een parent voor een grid-layout door 'display: grid' */
+  display: grid;
+  grid-template-areas:
+    "header header header header header" /* 5 fracties header = 100% */
+    "main   main   main   main   aside" /*  1fr menu = 20% |  3fr main = 60% | 1fr right = 20% */
+    "footer footer footer footer footer"; /* 1fr menu = 20% | 4fr footer = 80% */
+}
+
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+body > header,
+main,
+aside,
+footer {
+  /* children binnen een grid-container worden automatisch grid-items */
+  text-align: left;
+  padding: 5px 0;
+  font-size: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  background-color: #91c8ff;
+}
+
+main {
+  background-color: #7da9d5;
+}
+
+aside {
+  background-color: #007fff;
+}
+
+footer {
+  background-color: #588ec3;
+}
