@@ -15,6 +15,9 @@ header {
   grid-area: header;
 }
 
+nav {
+  grid-area: nav;
+}
 main {
   grid-area: main;
 }
@@ -37,8 +40,16 @@ footer {
 }
 
 header {
-  display: grid;
   background-color: #91c8ff;
+}
+header > nav {
+  background-color: #b3d8fd;
+  width: 250px;
+  grid-template-columns: 1fr;
+
+}
+.nav {
+  align-self: ;
 }
 
 main {
